@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-blend-mode: multiply;
+    backdrop-filter: blur(10px);
+}
+
+.form-box {
+    background-blend-mode: color-burn;
+    position: relative;
+    display: flex;
+    height: fit-content;
+    padding: 30px 0;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-box h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 1.2px solid black;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: .9em;
+    pointer-events: none;
+    transition: .3s;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0px 5px;
+    color: black;
+}
+
+.input-box i {
+    position: absolute;
+    right: 8px;
+    color: black;
+    top: 20px;
+    font-size: 1em;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+    font-size: .9em;
+}
+
+button {
+    width: 50%;
+    background-color: green;
+    border-radius: 1px;
+    color: white;
+    border: none;
+    outline: 1px black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+    transition: .2s;
+    letter-spacing: .9px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: underline;
+}
+.sign-in {
+    text-align: center;
+    font-size: .9em;
+    padding: 10px 0 0px 0;
+    margin-top: 5px;
+    color: black;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+.sign-in a:hover {
+    color: green;
+    text-decoration: underline;
+}

@@ -1,0 +1,52 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>ArcSector | Designers </title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'stylesheets/designers.css' %}">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/acc89a4fb1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="table_content">
+        <div class="cards">
+            {% for designer in designers %}
+            <div class="card">
+                <div class="card-cont">
+                    <div class="image">
+                        {% if designer.profile_pic %}
+                        <img class="card-img-top" src="{{ designer.profile_pic.url }}" alt="Card image"
+                            style="width:100%">
+                        {% endif %}
+                    </div>
+                    <div class="cont">
+                        <h3 class="card-title"><span>{{designer.name}}</span></h3>
+                        <p class="card-title"><span>Role :</span> {{designer.occupation}}</p>
+                        </p>
+                        <p class="card-text" style="margin-top: -10px;"><i
+                                class="fa-solid fa-location-dot"></i></i><span>{{designer.country}}</span></p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{designer.bio}}</p>
+                    <div class="cardie">
+                        {% for skill in designer.skills.all %}
+                        <ul>
+                            <li><span class="badge bg-secondary ">{{skill}}</span></li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <a href="#" class="btn"> Visit Profile </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'stylesheets/navbar.css' %}">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/acc89a4fb1.js" crossorigin="anonymous"></script>
+    <!-- Google Icons -->
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <h1>
+            ArcSector
+        </h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'homepage' %}" active>Home</a></li>
+                <li><a href="#page6">Blog</a></li>
+                <li>
+                    <a>Projects</a>
+                    <ul>
+                        <li><a href="{% url 'projects' %}">Explore</a></li>
+                        <li><a href="{% url 'create_project' %}">Add Projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'designers' %}">Designers</a></li>
+                <li><a href="{% url 'profile' pk=user.id %}">My Profile</a>
+                    <ul>
+                        {% if request.user.is_authenticated %}
+
+                        <li><a href="{% url 'signout' %}">Sign out</a></li>
+                        {% else %}
+                        <li><a href="{% url 'signin' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav-end -->
+
+    {% block content %}
+    {% endblock content %}
+
+    <div id="page6">
+        <div class="bottom">
+            <div class="definition">
+                <p> A decsription thet tells <br>
+                    clients that how good you are and <br>
+                    proves that you are the best.</p>
+            </div>
+            <div class="list1">
+                <h2 style="margin-left: -10px;">Our company</h2>
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a> </li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a> </li>
+                    <li><a href="{% url 'projects' %}">Projects</a> </li>
+                    <li><a href="{% url 'designers' %}">Designers</a> </li>
+                </ul>
+            </div>
+            <div class="list2">
+                <h2 style="padding-left: 20px;">Get in Touch</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram </a>
+                    </li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook </a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin </a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter </a></li>
+                </ul>
+            </div>
+            <div class="list3">
+                <h2>Address Info</h2>
+                <ul>
+                    <li>123,Fifth avenue,Lane no:17</li>
+                    <li>New York, NY-1234</li>
+                    <li>123-4567</li>
+                    <li>arcsector@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="line" width="80%" style="border: .5px solid white;" </div>
+            <div class="copy_table">
+                <p>Copyrigth @ 2023 ArcSector.in</p>
+                <p>Powered by ArcSector</p>
+            </div>
+        </div>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>

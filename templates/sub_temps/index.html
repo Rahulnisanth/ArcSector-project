@@ -1,0 +1,223 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+<doctype html>
+    <html lang="en">
+
+    <head>
+        <title>ArcSector | Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{% static 'stylesheets/index.css' %}">
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/acc89a4fb1.js" crossorigin="anonymous"></script>
+        <!-- Google Icons -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+
+    <body>
+        <div class="block">
+            <div class="page1">
+                <div class="content" style="background-image:url({% static 'images/index bg.jpg' %});">
+                    <div class="wording">
+                        <h2>Modern Design <br> Solutions</h2>
+                        <p>Our power of choice is untrammelled and nothing prevents <br> our being able to do what we
+                            like
+                            the best.</p>
+                        <br>
+                        <a href="{% url 'portfolio' %}">Visit Portfolio <span>&#10230;</span></a>
+                    </div>
+                    <div class="image">
+                        <img class="hidden" style="height:80%;width: 600px;" src="{% static 'images/cropped bg.jpg' %}"
+                            alt="interior">
+                    </div>
+                </div>
+            </div>
+            <div class="page2">
+                <div class="upper">
+                    <center>
+                        <p>
+                            Interior and Exterior Designs Doesn't Have to be <br>
+                            Expensive or Complicates! It should Be <br>
+                            Smart & User Friendly
+                        </p>
+                    </center>
+                </div>
+                <div class="description">
+                    <div class="image">
+                        <img style="border-radius: 10px;width: 100%;height: 100%;"
+                            src="{% static 'images/page2 bg.jpg' %}" alt="Sofa">
+                    </div>
+
+                    <div class="script">
+                        <p><span>ESTABLISHED</span>_MMXXVV</p>
+                        <h3>Interior and Exterior<br>Design Firm </h3>
+                        <hr>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal
+                            distribution of letters.<br>
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
+                            model
+                            text, and a search.<br>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered
+                            alteration in some form, by injected humour, or randomised words which don't look even
+                            slightly
+                            believable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="page3">
+                <div class="contain"
+                    style="background-image: url('{% static 'images/green bg.jpg' %}'); background-attachment:fixed;">
+                    <div class="card">
+                        <p><i class="fa-solid fa-award" style="color: green;"></i></p>
+                        <p>OUR RECENT</p>
+                        <h4>Award Winning Projects</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable
+                            content.<br><br>
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                        </p>
+                        <ul>
+                            <li>IND Interior & Exterior Design Firm - 2023</li>
+                            <li>International Startup Nominee - 2019</li>
+                            <li>US Best Interior & Exterior Firm - 2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="page4">
+                <center>
+                    <p>EVERY SPACE COUNT</p>
+                    <h2 style="font-weight: 600;">Why Choose Us</h2>
+                </center>
+                <div id="bottomcover">
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <h3 class="card-title">Building Planning</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-cube"></i>
+                            <h3 class="card-title">Interior Spacing</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-building"></i>
+                            <h3 class="card-title">Small Offices</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            <h3 class="card-title">Renovating Space</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-house"></i>
+                            <h3 class="card-title">Real Estates</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 350px;">
+                        <div class="card-body">
+                            <i class="fa-solid fa-suitcase"></i>
+                            <h3 class="card-title">Free Consultation</h3>
+                            <p class="card-text">
+                                It is a long established fact that a reader will be readable content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page5" style="background-image: url('{% static 'images/testimonals.jpg' %}');">
+                <div id="start">
+                    <div class="fleet" style="padding-top: 50px;">
+                        <h4> TESTIMONIALS <span>&#10230;</span></h4>
+                        <h2 style="font-weight: 600;">What Our Client Say</h2>
+                        <p>It is a long established fact that a reader will be readable content.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p class="card-text">It is a long established fact that a reader will be distracted by the
+                            readable
+                            content.<br>
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                        </p>
+                        <h5 style="font-weight:600;" class="card-title"><i class="fa-solid fa-user"
+                                style="padding-right: 10px;"></i> Madhan G</h5>
+                    </div>
+                </div>
+                <div id="end">
+                    <div class="card" style="margin-top: -50px;">
+                        <p class="card-text">It is a long established fact that a reader will be distracted by the
+                            readable
+                            content.<br>
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                            letters.<br>
+                            It is a long established fact that a reader will be distracted by the readable
+                            content.<br>
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                        </p>
+                        <h5 style="font-weight:600;" class="card-title"><i class="fa-solid fa-user"
+                                style="padding-right: 10px;"></i> Ranjith P</h5>
+                    </div>
+                    <div class="card">
+                        <p class="card-text">It is a long established fact that a reader will be distracted by the
+                            readable
+                            content.<br>
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                        </p>
+                        <h5 style="font-weight:600;" class="card-title"><i class="fa-solid fa-user"
+                                style="padding-right: 10px;"></i> Ranjan P</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
+        <!-- Index-Script -->
+        <script src="{% static 'scripts/index.js' %}"></script>
+
+    </body>
+
+    </html>
+    {% endblock content %}

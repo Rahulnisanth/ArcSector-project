@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+<div class="box">
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are you sure want to delete "{{object}}" ?</p>
+        <button><a href="{% url 'projects' %}">Go Back</a></button>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+
+
+{% endblock content %}

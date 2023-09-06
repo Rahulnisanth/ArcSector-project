@@ -1,0 +1,47 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>ArcSector | Projects</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'stylesheets/projects.css' %}">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/acc89a4fb1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="table_content">
+        <div class="cards">
+            {% for project in projects %}
+            <div class="card" style="width:450px;">
+                <div class="image" style="padding: 15px 15px 15px 15px;">
+                    {% if project.project_image %}
+                    <img class="card-img-top" src="{{ project.project_image.url }}" alt="Card image" style="width:100%">
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                    <p class="card-title"><span>Title :</span> {{project.title}}</p>
+                    <!-- <p class="card-title"><span>Owner :</span> {{project.owner}} </p> -->
+                    <p class="card-text"><span>Description : </span>{{project.description}}</p>
+                    <p class="card-text"><span>Tags : </span>
+                        {% for tag in project.tags.all %}
+                        <span class="badge bg-secondary ">{{tag}}</span>
+                        {% endfor %}
+                    </p>
+                    <p class="card-text"><span>Demo Link : </span><a href="#">{{project.source_link}}</a></p>
+                    <p class="card-text"><span>Started : </span> {{project.start_date}}</p>
+                    <p class="card-text"><span>Completed : </span>{{project.completed_date}}</p>
+                    <h5 class="card-text"><span>Budget : </span> $ {{project.voucher}}</h5>
+
+                    <a href="#" class="btn">Contact </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock content %}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <title>ArcSector | Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'stylesheets/register.css' %}">
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/acc89a4fb1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section style='background-image: url("{% static "images/login.jpg" %}");'>
+        <div class="form-box">
+            <div class="input-form">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h2><i class="fa-solid fa-layer-group" style="color: green;"></i> <br>- Register -</h2>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="name" name="username" required>
+                        <label for="">Name</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="email" name="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password1" required>
+                        <label for="">Passkey</label>
+                    </div>
+                    <div class="input-box">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password2" required>
+                        <label for="">Re-Type Passkey</label>
+                    </div>
+                    <div class="detail">
+                        <label for=""><input type="checkbox" name="male"> Male</label>
+                        <label for=""><input type="checkbox" name="female"> Female</label>
+                    </div>
+                    <center style="padding-top: 15px;">
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible">
+                            <div type="button" class="btn-close" data-bs-dismiss="alert"></div>
+                            <strong>{{ message }}</strong>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    </center>
+            <center>
+                <button>Register</button>
+            </center>
+            <div class="sign-in">
+                <p>
+                    Already have an account? <a href="{% url 'signin' %}">Login</a>
+                </p>
+            </div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

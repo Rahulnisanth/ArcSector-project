@@ -1,0 +1,360 @@
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="utf-8">
+    <title>ArcSector | Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            padding: 0px !important;
+            margin: 0px !important;
+            font-size: 13px;
+            background-color: green;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .profile-nav,
+        .profile-info {
+            margin-top: 30px;
+        }
+
+        .profile-nav .user-heading {
+            background: green;
+            color: #fff;
+            border-radius: 4px 4px 0 0;
+            -webkit-border-radius: 4px 4px 0 0;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid white;
+        }
+
+        .profile-nav .user-heading.round a {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border: 10px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+        }
+
+        .profile-nav .user-heading a img {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+
+        .profile-nav .user-heading h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .profile-nav .user-heading p {
+            font-size: 13px;
+        }
+
+        .profile-nav ul {
+            margin-top: 1px;
+        }
+
+        .profile-nav ul>li {
+            border-bottom: 1px solid #ebeae6;
+            margin-top: 0;
+            line-height: 30px;
+        }
+
+        .profile-nav ul>li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-nav ul>li>a {
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            color: black;
+            border-left: 5px solid #fff;
+        }
+
+        .profile-nav ul>li>a:hover,
+        .profile-nav ul>li>a:focus,
+        .profile-nav ul li.active a {
+            background: #f8f7f5 !important;
+            border-left: 5px solid green;
+            color: black;
+        }
+
+        .profile-nav ul>li:last-child>a:last-child {
+            border-radius: 0 0 4px 4px;
+            -webkit-border-radius: 0 0 4px 4px;
+        }
+
+        .profile-nav ul>li>a>i {
+            font-size: 16px;
+            padding-right: 10px;
+            color: black;
+        }
+
+        .r-activity {
+            margin: 6px 0 0;
+            font-size: 12px;
+        }
+
+        .profile-info .panel .skillset {
+            padding: 0px 0px;
+            background-color: green;
+            border: 1px solid white;
+        }
+
+        .profile-info .panel .skillset ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: space-evenly;
+            padding: 20px 0 20px 0;
+            margin: 0;
+        }
+
+        .profile-info .panel .skillset ul li {
+            list-style: none;
+            font-size: 15px;
+            color: white;
+        }
+
+        .profile-info .panel-footer {
+            background-color: #f8f7f5;
+            border-top: 1px solid #e7ebee;
+            text-align: center;
+        }
+
+        .profile-info .panel-footer ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-info .panel-footer ul li a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .bio-graph-heading {
+            border: 1px solid white;
+            background: green;
+            color: #fff;
+            text-align: center;
+            padding: 40px 110px;
+            border-radius: 4px 4px 0 0;
+            -webkit-border-radius: 4px 4px 0 0;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .bio-graph-info {
+            color: black;
+        }
+
+        .bio-graph-info h1 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 10px 0 20px 35px;
+        }
+
+        .bio-row {
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+            padding: 0 15px 0 50px;
+        }
+
+        .bio-row p span {
+            width: 100px;
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+
+        .bio-chart,
+        .bio-desk {
+            float: left;
+        }
+
+        .bio-chart {
+            width: 40%;
+        }
+
+        .bio-desk {
+            width: 60%;
+            color: black;
+        }
+
+        .bio-desk h4 {
+            font-size: 15px;
+            font-weight: 400;
+            color: green !important;
+        }
+
+        .tags {
+            color: black;
+        }
+
+        .tags ul {
+            margin: 0px 0px 0px -50px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .tags ul li {
+            list-style: none;
+            color: white !important;
+            background-color: green;
+            padding: 1px 4px 1px 4px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container bootstrap snippets bootdey">
+        <div class="row">
+            <h1 style="
+            font-size: 70px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Cabin Sketch', cursive;
+            border-radius: 40px 999em 999em 40px;
+            background-color: green;
+            padding-left: 20px;
+            ">~ My Profile ~</h1>
+            <div class="profile-nav col-md-3" style="height: 600px;">
+                <div class="panel">
+                    <div class="user-heading round">
+                        <a href="">
+                            {% if profile.profile_pic %}
+                            <img src="{{profile.profile_pic.url}}" alt="">
+                            {% endif %}
+                        </a>
+                        <h1>{{ profile.name }}</h1>
+                        <h5 style="font-weight: 600; font-size: 15px;"> - {{profile.occupation}} -</h5>
+                        <p style="font-size: 13px;"><i class="fa fa-map-marker"></i> {{profile.country}} </p>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="#"> <i class="fa fa-phone"></i> Contact</a></li> -->
+                        <li><a href="#"> <i class="fa fa-folder"></i>My Projects</a></li>
+                        <li><a href="{% url 'create_project' %}"> <i class="fa fa-plus"></i>Add Projects</a></li>
+                        <li><a href="{% url 'portfolio' %}"> <i class="fa fa-camera"></i>Portfolio</a></li>
+                        <li><a href="{% url 'edit_profile' pk=user.id %}"> <i class="fa fa-edit"></i> Edit profile</a>
+                        </li>
+                        <li><a href="{% url 'homepage' %}"> <i class="fa fa-home"></i>Go Back</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-info col-md-9">
+                <div class="panel">
+                    <div class="skillset">
+                        <ul style="border-radius: 2px;">
+                            {% for skill in profile.skills.all %}
+                            <li style="padding: 3px 6px 3px 6px;border: 1px solid white;border-radius: 3px;">{{ skill }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <footer class="panel-footer">
+                        <ul class="nav nav-pills">
+                            {% if profile.social_facebook %}
+                            <li>
+                                <a href="{{profile.social_facebook.url}}"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_instagram %}
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_linkedin %}
+                            <li>
+                                <a href="#"><i class=" fa fa-linkedin"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_twitter %}
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_github %}
+                            <li>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.mobile %}
+                            <li>
+                                <a href="#"><i class="fa fa-whatsapp"></i></a>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                    </footer>
+                </div>
+                <div class="panel">
+                    <div class="bio-graph-heading">
+                        " {{profile.bio}} "
+                    </div>
+                    <div class="panel-body bio-graph-info">
+                        <h1>Bio Graph</h1>
+                        <div class="row">
+                            <div class="bio-row">
+                                <p><span>First Name </span> {{profile.first_name}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Email </span> {{profile.email}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Last Name </span> {{profile.last_name}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Birthday</span> {{profile.DOB}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Country </span> {{profile.country}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Mobile </span> {{profile.mobile}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Occupation </span> {{profile.occupation}}</p>
+                            </div>
+                            <div class="bio-row">
+                                <p><span>Experience </span> {{profile.experience}} Years</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+{% endblock %}

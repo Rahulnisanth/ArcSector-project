@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.card {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: gray;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    padding-top: 200px;
+}
+
+.wording {
+    margin-top: 60px;
+}
+
+.wording h2 {
+    font-size: 80px;
+    font-weight: 1000;
+}
+
+.wording p {
+    font-size: 20px;
+}
+
+.wording a {
+    text-decoration: none;
+    background-color: green;
+    color: white !important;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 10px 10px 10px 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.wording a span {
+    font-size: 25px;
+    padding: 30px 20px 20px 10px;
+    line-height: 10px;
+}
+
+.page2 {
+    background-color: white;
+    color: black !important;
+    margin-bottom: 100px;
+}
+
+.upper p {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: 50px 0px 10px 0px;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.description .image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 500px;
+    height: 75vh;
+    margin-top: 50px;
+}
+
+.description hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.description .script {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.description .script h3 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.description .script p span {
+    font-weight: 600;
+}
+
+.description .script p {
+    display: inline-flex;
+    width: 400px;
+    letter-spacing: 1px;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+}
+
+.contain {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    padding-right: 100px;
+}
+
+.contain .card {
+    background: white;
+    color: black;
+    display: inline-flex;
+    width: 450px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: fit-content;
+    align-items: flex-start;
+}
+
+.card p {
+    font-size: 18px;
+    padding-bottom: 0;
+}
+
+.card h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card ul li {
+    font-size: 17px;
+    font-weight: 600;
+    list-style: square;
+}
+
+#page4 {
+    height: 107vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#page4 #bottomcover {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#page4 .card {
+    text-align: center;
+    border-radius: 0px !important;
+    height: fit-content;
+    margin: 50px 50px 50px 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding-bottom: 10px;
+}
+
+.card i {
+    font-size: 30px;
+    color: green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#page5 {
+    height: 110vh;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background-attachment: fixed;
+}
+
+#page5 .fleet {
+    color: white;
+}
+
+#page5 h4 {
+    font-weight: 700;
+}
+
+#page5 h4 span {
+    font-size: 35px;
+    padding-left: 10px;
+    position: relative;
+    top: 1px;
+    padding-bottom: 50px;
+}
+
+#page5 #start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#page5 #end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+
+#page5 .card {
+    height: fit-content;
+    width: 500px;
+    padding: 30px 30px 0px 30px;
+    text-align: start;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 0px !important;
+}

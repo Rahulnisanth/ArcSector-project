@@ -1,0 +1,36 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title> ArcSector | Editor </title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'stylesheets/create-project.css' %}">
+</head>
+
+<body>
+    <div class="container mt-4 pt-2 pb-2">
+        <h1 style="
+            font-size: 60px;
+            padding-bottom: 5px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Cabin Sketch', cursive;
+            border-radius: 40px 999em 999em 40px;
+            background-color: green;
+            padding-left: 20px;
+            ">Project Registration</h1>
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn" value="confirm" type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

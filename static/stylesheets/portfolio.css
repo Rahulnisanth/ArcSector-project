@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: 10px;
+}
+
+.cover {
+    background-color: gray;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white !important;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.cover .layout p {
+    font-size: 25px;
+}
+
+.layout h1 {
+    font-size: 75px;
+    font-weight: 700;
+    color: green;
+}
+
+.contain .page2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.page2 .living-room {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.living-room .child {
+    width: 430px;
+    margin-right: 20px;
+    padding: 15px 0px 0px 20px;
+    border-radius: 40px 999em 999em 40px;
+    background-color: green;
+    height: 100px;
+    justify-content: center;
+    color: white;
+}
+
+.living-room .child h2 {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.living-room .child p {
+    font-size: 15px;
+}
+
+.image {
+    overflow: hidden;
+    outline-offset: -10px;
+    outline-style: auto;
+    outline-color: white;
+    outline-width: 3px;
+}
+
+img {
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.5);
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 10px 50px;
+    background-color: green;
+    height: 60px;
+}
+
+nav h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li {
+    text-decoration: none !important;
+    float: left;
+    width: 160px;
+    height: 32px;
+    text-align: center;
+    color: white !important;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 3px 0px 5px 0px;
+    color: white !important;
+}
+
+.navbar ul li a:hover {
+    color: black !important;
+    cursor: pointer !important;
+}
+
+.navbar ul li ul li {
+    display: none;
+}
+
+.navbar ul li:hover ul li {
+    display: block;
+    background: green;
+}
+
+#page6 {
+    height: fit-content;
+    width: 100%;
+}
+
+#page6 .bottom {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2em;
+    background-color: green;
+    color: white;
+}
+
+#page6 .bottom h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+#page6 .bottom ul li {
+    list-style: none;
+    font-size: 1.2em;
+    color: white;
+}
+
+#page6 .bottom ul li a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+#page6 .bottom ul li a:hover {
+    color: black;
+}
+
+#page6 .copy_table {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+    font-size: 1.2em;
+    background-color: green;
+    color: white;
+}
