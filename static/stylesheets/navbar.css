@@ -71,16 +71,16 @@ nav h1 {
 }
 
 #page6 .bottom {
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.2em;
+    font-size: 17px !important;
     background-color: green;
     color: white;
 }
 
-#page6 .bottom h2 {
+#page6 .bottom h2 { 
     font-size: 1.5em;
     font-weight: 600;
     text-align: center;
