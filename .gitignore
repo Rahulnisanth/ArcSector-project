@@ -6,6 +6,5 @@
 /user/migrations
 /db.sqlite3
 /.vscode
-
-
+/manage.py
 
