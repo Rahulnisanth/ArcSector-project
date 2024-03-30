@@ -1,10 +1,10 @@
-/ArcSector/__pycache__
-/media
-/Project_app/__pycache__
-/Project_app/migrations
-/user/__pycache__
-/user/migrations
-/db.sqlite3
-/.vscode
-/manage.py
 
+/media
+
+db.sqlite3
+.vscode
+
+
+*/__pycache__
+*/migrations
+*/__init__.py
